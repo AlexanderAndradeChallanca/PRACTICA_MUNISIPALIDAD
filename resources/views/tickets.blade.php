@@ -102,7 +102,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div>
                         <label class="block text-xs font-bold text-slate-700 mb-1">DNI del Solicitante (8 dígitos) *</label>
-                        <input type="text" name="solicitante" value="{{ old('solicitante') }}" required maxlength="8" inputmode="numeric"
+                        <input type="text" name="dni" value="{{ old('dni') }}" required maxlength="8" inputmode="numeric"
                             oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 8); this.setCustomValidity('');"
                             oninvalid="this.setCustomValidity('Por favor, ingrese el DNI del solicitante (8 dígitos).')"
                             placeholder="Ej. 76938244"
@@ -124,7 +124,7 @@
 
                     <div>
                         <label class="block text-xs font-bold text-slate-700 mb-1">Código Patrimonial SBN (12 dígitos) *</label>
-                        <input type="text" name="codigo" value="{{ old('codigo') }}" required maxlength="12" inputmode="numeric"
+                        <input type="text" name="codigo_patrimonial" value="{{ old('codigo_patrimonial') }}" required maxlength="12" inputmode="numeric"
                             oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 12); this.setCustomValidity('');"
                             oninvalid="this.setCustomValidity('Por favor, ingrese el código patrimonial SBN de 12 dígitos.')"
                             placeholder="Ej. 740899500123"
