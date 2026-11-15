@@ -7,6 +7,7 @@ use App\Models\Categoria;
 use App\Models\Tecnico;
 use App\Models\Ticket;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Schema;
 
 class TicketController extends Controller
@@ -51,6 +52,7 @@ class TicketController extends Controller
             'solicitante' => $validated['dni'],
             'area_id' => $validated['area_id'],
             'categoria_id' => $validated['categoria_id'],
+            'registrado_por_user_id' => Auth::id(),
             'titulo' => $validated['titulo'],
             'prioridad' => $validated['prioridad'],
             'descripcion' => $validated['descripcion'],
